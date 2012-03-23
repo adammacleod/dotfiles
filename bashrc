@@ -107,3 +107,5 @@ if [ -d ~/.bin ] ; then
     PATH=~/.bin:"${PATH}"
 fi
 export PATH
+
+export EDITOR=/usr/bin/vim

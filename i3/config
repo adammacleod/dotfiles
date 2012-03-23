@@ -77,28 +77,28 @@ bindcode Mod3+Shift+45 focus parent; move up
 bindcode Mod3+Shift+46 focus parent; move right
 
 # Workspaces (Mod1+1/2/…)
-bindcode Mod1+10 workspace 1
-bindcode Mod1+11 workspace 2
+bindcode Mod1+10 workspace 1: www
+bindcode Mod1+11 workspace 2: code
 bindcode Mod1+12 workspace 3
 bindcode Mod1+13 workspace 4
 bindcode Mod1+14 workspace 5
-bindcode Mod1+15 workspace 6
-bindcode Mod1+16 workspace 7
-bindcode Mod1+17 workspace 8
-bindcode Mod1+18 workspace 9
-bindcode Mod1+19 workspace 10
+bindcode Mod1+15 workspace 6: bug
+bindcode Mod1+16 workspace 7: log
+bindcode Mod1+17 workspace 8: mail
+bindcode Mod1+18 workspace 9: chat
+bindcode Mod1+19 workspace 10: vm
 
 # Move to Workspaces
-bindcode Mod1+Shift+10 move workspace 1
-bindcode Mod1+Shift+11 move workspace 2
+bindcode Mod1+Shift+10 move workspace 1: www
+bindcode Mod1+Shift+11 move workspace 2: code
 bindcode Mod1+Shift+12 move workspace 3
 bindcode Mod1+Shift+13 move workspace 4
 bindcode Mod1+Shift+14 move workspace 5
-bindcode Mod1+Shift+15 move workspace 6
-bindcode Mod1+Shift+16 move workspace 7
-bindcode Mod1+Shift+17 move workspace 8
-bindcode Mod1+Shift+18 move workspace 9
-bindcode Mod1+Shift+19 move workspace 10
+bindcode Mod1+Shift+15 move workspace 6: bug
+bindcode Mod1+Shift+16 move workspace 7: log
+bindcode Mod1+Shift+17 move workspace 8: mail
+bindcode Mod1+Shift+18 move workspace 9: chat
+bindcode Mod1+Shift+19 move workspace 10: vm
 
 # Mod1+Enter starts a new terminal
 bindcode Mod1+36 exec /usr/bin/urxvt
@@ -134,3 +134,17 @@ client.urgent           #2f343a #900000 #ffffff
 bar {
     status_command i3status
 }
+
+# Keep apps on their correct workspace
+assign [class="Pidgin"] 9: chat
+assign [class="vmware"] 10: vm
+
+# Keep workspaces on specified screens
+workspace "1: www" output xinerama-0
+workspace "2: code" output xinerama-0
+
+workspace "6: bug" output xinerama-1
+workspace "7: log" output xinerama-1
+workspace "8: mail" output xinerama-1
+workspace "9: chat" output xinerama-1
+workspace "10: vm" output xinerama-1
