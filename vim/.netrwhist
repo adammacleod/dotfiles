@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/adamm/code/referral.s2s.org.au/app/views/mason/careplan/review'
+let g:netrw_dirhist_2='/home/adamm/code/referral.s2s.org.au/code_module/app/controllers/careplan'
+let g:netrw_dirhist_3='/home/adamm/code/referral.s2s.org.au/code_module/app/lib/S2S/Controller/Mason/Base'
+let g:netrw_dirhist_4='/home/adamm/code/referral.s2s.org.au/code_module/app/controllers/careplan'
+let g:netrw_dirhist_5='/home/adamm/code/referral.s2s.org.au/code_module/app/lib/S2S/Controller/Mason/CRUD'
+let g:netrw_dirhist_6='/home/adamm/code/referral.s2s.org.au/code_module/app/lib/S2S/Controller/Mason/Base'
+let g:netrw_dirhist_7='/home/adamm/code/referral.s2s.org.au'
+let g:netrw_dirhist_8='/home/adamm/.vim'
