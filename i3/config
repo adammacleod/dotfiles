@@ -148,3 +148,5 @@ workspace "7: log" output xinerama-1
 workspace "8: mail" output xinerama-1
 workspace "9: chat" output xinerama-1
 workspace "10: vm" output xinerama-1
+
+focus_follows_mouse no
