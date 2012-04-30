@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from __future__ import print_function
 import sys, atexit
-from datetime import datetime
+import time
 
 COLOURS = [
     #'\033[30m', # Black
@@ -14,9 +14,9 @@ COLOURS = [
     #'\033[37m', # White
     ]
 RESET_COLOUR = '\033[0m'
-TIMEOUT = 3
+TIMEOUT = 3.0
 
-then = datetime.now()
+then = time.time()
 
 def printer():
     global then
@@ -27,10 +27,10 @@ def printer():
         if not line:
             break
 
-        delta = datetime.now() - then
-        then = datetime.now()
+        delta = time.time() - then
+        then = time.time()
 
-        if delta.total_seconds() > TIMEOUT:
+        if delta > TIMEOUT:
             change_colour()
         print(line, end='')
 
