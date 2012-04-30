@@ -27,9 +27,8 @@ def printer():
         if not line:
             break
 
-        now = datetime.now()
-        delta = now-then
-        then = now
+        delta = datetime.now() - then
+        then = datetime.now()
 
         if delta.total_seconds() > TIMEOUT:
             change_colour()
