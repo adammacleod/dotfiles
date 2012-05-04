@@ -1,3 +1,9 @@
+set tabstop=4           " use 4 spaces to represent tab
+set noexpandtab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+
 " http://stackoverflow.com/a/65122
 " configure expanding of tabs for various file types
 au BufRead,BufNewFile *.py set expandtab
@@ -7,17 +13,7 @@ au BufRead,BufNewFile Makefile* set noexpandtab
 
 " Treat anything ending in html as a html document
 au BufRead,BufNewFile *html setf html
-au BufRead,BufNewFile *.cinc setf html
-
-" --------------------------------------------------------------------------------
-" configure editor with tabs and nice stuff...
-" --------------------------------------------------------------------------------
-" set expandtab           " enter spaces when tab is pressed
-" set textwidth=120       " break lines when line length increases
-set tabstop=4           " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4        " number of spaces to use for auto indent
-set autoindent          " copy indent from current line when starting a new line
+au BufRead,BufNewFile *inc setf html
 
 " make backspaces more powerfull
 set backspace=indent,eol,start
@@ -46,3 +42,16 @@ if &term =~ "xterm" || &term =~ "screen" || &term =~ "rxvt"
 	let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
 	let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 endif
+
+
+"
+" Handling Whitespace
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+"
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /^\s* \s* \s*/
+autocmd BufWinLeave * call clearmatches()
