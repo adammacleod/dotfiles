@@ -1,4 +1,0 @@
-[dotfiles]
-repository = ~/Dotfiles
-ignore = [
-    '.git']
