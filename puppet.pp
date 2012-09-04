@@ -28,42 +28,42 @@ file { 'bin':
 	path	=> '/home/adamm/bin',
 	ensure	=> link,
 	mode	=> 700,
-	source	=> '/home/adamm/code/Dotfiles/bin',
+	target	=> '/home/adamm/code/Dotfiles/bin/',
 }
 
 file { 'bashrc':
 	path	=> '/home/adamm/.bashrc',
 	ensure	=> link,
 	mode	=> 600,
-	source	=> '/home/adamm/code/Dotfiles/home/.bashrc',
+	target	=> '/home/adamm/code/Dotfiles/home/.bashrc',
 }
 
 file { 'gitkrc-2.0':
 	path	=> '/home/adamm/.gitkrc-2.0',
 	ensure	=> link,
 	mode	=> 600,
-	source	=> '/home/adamm/code/Dotfiles/home/.gitkrc-2.0',
+	target	=> '/home/adamm/code/Dotfiles/home/.gitkrc-2.0',
 }
 
 file { 'icons':
 	path	=> '/home/adamm/.icons',
 	ensure	=> link,
 	mode	=> 700,
-	source	=> '/home/adamm/code/Dotfiles/home/.icons',
+	target	=> '/home/adamm/code/Dotfiles/home/.icons',
 }
 
 file { 'vimrc':
 	path	=> '/home/adamm/.vimrc',
 	ensure	=> link,
 	mode	=> 600,
-	source	=> '/home/adamm/code/Dotfiles/home/.vimrc',
+	target	=> '/home/adamm/code/Dotfiles/home/.vimrc',
 }
 
 file { 'xsession':
 	path	=> '/home/adamm/.xsession',
 	ensure	=> link,
 	mode	=> 600,
-	source	=> '/home/adamm/code/Dotfiles/home/.xsession',
+	target	=> '/home/adamm/code/Dotfiles/home/.xsession',
 }
 
 ################################################################################
