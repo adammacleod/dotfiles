@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/adamm/code/referral.s2s.org.au/app/views/mason/careplan/goals'
-let g:netrw_dirhist_2='/home/adamm/code/referral/app/lib/S2S/Model'
-let g:netrw_dirhist_3='/home/adamm/code/referral/app/lib/S2S'
-let g:netrw_dirhist_4='/home/adamm/code/referral/app/lib'
-let g:netrw_dirhist_5='/home/adamm/code/referral/app'
-let g:netrw_dirhist_6='/home/adamm/code/referral'
-let g:netrw_dirhist_7='/home/adamm/code'
