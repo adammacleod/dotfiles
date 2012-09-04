@@ -24,6 +24,13 @@ file { 'xsessions':
 ################################################################################
 
 # This whole section is very badly done, but at least it's done.
+file { 'bin':
+	path	=> '/home/adamm/bin',
+	ensure	=> link,
+	mode	=> 700,
+	source	=> '/home/adamm/code/Dotfiles/bin',
+}
+
 file { 'bashrc':
 	path	=> '/home/adamm/.bashrc',
 	ensure	=> link,
