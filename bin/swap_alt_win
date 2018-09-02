@@ -1,3 +1,3 @@
 #!/bin/sh
 
-xmodmap .swap_alt_win
+xmodmap ~/code/dotfiles/bin/.swap_alt_win
